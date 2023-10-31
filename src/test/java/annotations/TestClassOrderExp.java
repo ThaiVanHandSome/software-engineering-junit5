@@ -18,8 +18,7 @@ class TestClassOrderExp {
 	class PrimaryTests{
 		@Test
 		void test_1() {
-			MathUtils mathUtils = new MathUtils();
-			assertEquals(10, mathUtils.add(6, 4));
+			assertEquals(10, MathUtils.add(6, 4));
 		}
 	}
 	
@@ -28,7 +27,6 @@ class TestClassOrderExp {
 	class SecondaryTests{
 		@Test
 		void test_2() {
-			StringUtils stringUtils = new StringUtils();
 			assertTrue(StringUtils.isPalindrome("abcba"));
 		}
 	}

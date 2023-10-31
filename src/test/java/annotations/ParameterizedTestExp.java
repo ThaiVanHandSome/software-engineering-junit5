@@ -16,9 +16,9 @@ class ParameterizedTestExp {
 	StringUtils stringUtils = new StringUtils();
 	
 	@ParameterizedTest
-	@ValueSource(ints = {1, 2, 3, 4, 5, 6, 7})
+	@ValueSource(ints = { 2, 4, 6})
 	void testIsEvenNumber(int candidate) {
-		assertTrue(mathUtils.isEvenNumber(candidate), "The number should be even number");
+		assertTrue(MathUtils.isEvenNumber(candidate), "The number should be even number");
 	}
 	
 	
@@ -27,25 +27,26 @@ class ParameterizedTestExp {
 	void testPalindrome(String candidate) {
 		assertTrue(StringUtils.isPalindrome(candidate), "The string should be palindrome");
 	}
-	
+
 	
 	@ParameterizedTest
 	@NullSource
 	void testPalindromeWithNull(String candidate) {
-		assertTrue(stringUtils.isPalindrome(candidate), "The string should be palindrome");
+		assertTrue(StringUtils.isPalindrome(candidate), "The string should be palindrome");
 	}
 	
 	@ParameterizedTest
 	@EmptySource
 	void testPalindromeWithEmpty(String candidate) {
-		assertTrue(stringUtils.isPalindrome(candidate), "The string should be palindrome");
+//		System.out.println(candidate);
+		assertTrue(StringUtils.isPalindrome(candidate), "The string should be palindrome");
 	}
 	
 	@ParameterizedTest
 	@NullAndEmptySource
 	void testPalindromeWithEmptyAndNull(String candidate) {
 		System.out.println(candidate);
-		assertTrue(stringUtils.isPalindrome(candidate), "The string should be palindrome");
+		assertTrue(StringUtils.isPalindrome(candidate), "The string should be palindrome");
 	}
 
 

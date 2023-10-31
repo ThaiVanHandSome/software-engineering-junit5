@@ -13,8 +13,7 @@ class DisplayNameExp {
 	@Test
 	@DisplayName("Add 2 numbers")
 	void add() {
-		MathUtils mathUtils = new MathUtils();
-		assertEquals(10, mathUtils.add(6, 4));
+		assertEquals(10, MathUtils.add(6, 4));
 	}
 	
 	@Test

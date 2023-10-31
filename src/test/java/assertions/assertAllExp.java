@@ -8,8 +8,6 @@ import javabrains.MathUtils;
 import javabrains.StringUtils;
 
 class assertAllExp {
-	MathUtils mathUtils = new MathUtils();
-	StringUtils stringUtils = new StringUtils();
 
 	@Test
 	void testAssertAll() {
@@ -18,8 +16,8 @@ class assertAllExp {
 		assertAll(
 		  "heading",
 		  () -> assertEquals(7, a + b, "should be equal!"),
-		  () -> assertTrue(mathUtils.isEvenNumber(6), "should be even number!"),
-		  () -> assertFalse(stringUtils.isPalindrome("abcab"), "should be not palindrome")
+		  () -> assertTrue(MathUtils.isEvenNumber(6), "should be even number!"),
+		  () -> assertFalse(StringUtils.isPalindrome("abcab"), "should be not palindrome")
 		);
 	}
 

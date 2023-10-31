@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class TagExp {
 
 	@Test
-	@Tag("taxes")
+	@Tag("taxes1")
 	void testingTaxCalculation() {
 	}
 

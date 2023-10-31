@@ -28,5 +28,4 @@ class BeforeEachExp {
 	void testRepeat(RepetitionInfo repetitionInfo) {
 		System.out.println(repetitionInfo.getCurrentRepetition());
 	}
-	
 }

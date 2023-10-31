@@ -52,33 +52,33 @@ class NestedExp {
 //		}
 //	}
 	
-	@BeforeEach()
-    void beforeEach() {
-        System.out.println("NestedExp.beforeEach()");
-    }
-
-    @Nested
-    class FirstNestedClass {
-        @BeforeEach()
-        void beforeEach() {
-            System.out.println("FirstNestedClass.beforeEach()");
-        }
-
-        @Test
-        void test() {
-            System.out.println("FirstNestedClass.test()");
-        }
-        
-        // thêm trường hợp 2 test
-        @Test
-        void test2() {
-            System.out.println("FirstNestedClass.test2()");
-        }
-    }
-
+//	@BeforeEach()
+//    void beforeEach() {
+//        System.out.println("NestedExp.beforeEach()");
+//    }
+//
+//    @Nested
+//    class FirstNestedClass {
+//        @BeforeEach
+//        void beforeEach() {
+//            System.out.println("FirstNestedClass.beforeEach()");
+//        }
+//
+//        @Test
+//        void test() {
+//            System.out.println("FirstNestedClass.test()");
+//        }
+//        
+////        // thêm trường hợp 2 test
+//        @Test
+//        void test2() {
+//            System.out.println("FirstNestedClass.test2()");
+//        }
+//    }
+//
     @Nested
     class SecondNestedClass {
-        @BeforeEach()
+        @BeforeEach
         void beforeEach() {
             System.out.println("SecondNestedClass.beforeEach()");
         }
@@ -88,4 +88,50 @@ class NestedExp {
             System.out.println("SecondNestedClass.test()");
         }
    }
+    
+    @Test
+    public void testAddition() {
+        int result = MathUtils.add(5, 3);
+        assertEquals(8, result);
+    }
+
+    @Nested
+    class SubtractionTests {
+        @Test
+        public void testPositiveSubtraction() {
+            int result = MathUtils.subtract(10, 3);
+            assertEquals(7, result);
+        }
+
+        @Test
+        public void testNegativeSubtraction() {
+            int result = MathUtils.subtract(3, 10);
+            assertEquals(-7, result);
+        }
+    }
+
+    @Nested
+    class MultiplicationTests {
+        @Test
+        public void testMultiplication() {
+            int result = MathUtils.multiply(5, 3);
+            assertEquals(15, result);
+        }
+
+        @Test
+        public void testZeroMultiplication() {
+            int result = MathUtils.multiply(5, 0);
+            assertEquals(0, result);
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+

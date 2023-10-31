@@ -20,8 +20,7 @@ class DisplayNameGenerationExp {
 	class TEST_1 {
 		@Test
 		void add() {
-			MathUtils mathUtils = new MathUtils();
-			assertEquals(10, mathUtils.add(6, 4));
+			assertEquals(10, MathUtils.add(6, 4));
 		}
 	}
 
@@ -31,7 +30,6 @@ class DisplayNameGenerationExp {
 		@ParameterizedTest
 		@ValueSource(strings = { "racecar", "radae", "abcba" })
 		void testPalindrome(String candidate) {
-			StringUtils stringUtils = new StringUtils();
 			assertTrue(StringUtils.isPalindrome(candidate), "Must be palindrome string");
 		}
 	}
@@ -41,7 +39,6 @@ class DisplayNameGenerationExp {
 	class TEST_3 {
 		@Test
 		void isPalindrome() {
-			StringUtils stringUtils = new StringUtils();
 			assertTrue(StringUtils.isPalindrome("abcba"));
 		}
 	}
@@ -51,8 +48,7 @@ class DisplayNameGenerationExp {
 	class TEST_4 {
 		@Test
 		void add() {
-			MathUtils mathUtils = new MathUtils();
-			assertEquals(12, mathUtils.add(3, 9));
+			assertEquals(12, MathUtils.add(3, 9));
 		}
 	}
 

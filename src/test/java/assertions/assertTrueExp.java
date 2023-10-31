@@ -8,19 +8,17 @@ import javabrains.MathUtils;
 import javabrains.StringUtils;
 
 class assertTrueExp {
-	MathUtils mathUtils = new MathUtils();
-	StringUtils stringUtils = new StringUtils();
 	
 	@Test
 	void testIsEvenNumber() {
-		int a = 4;
-		assertTrue(mathUtils.isEvenNumber(a), "The number should be even number");
+		int a = 5;
+		assertTrue(MathUtils.isEvenNumber(a), "The number should be even number");
 	}
 	
 	@Test
 	void testIsPalindrome() {
 		String str = "radar";
-		assertTrue(stringUtils.isPalindrome(str), "The string should be palindrome");
+		assertTrue(StringUtils.isPalindrome(str), "The string should be palindrome");
 	}
 
 }
