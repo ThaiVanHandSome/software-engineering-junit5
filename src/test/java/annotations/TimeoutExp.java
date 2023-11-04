@@ -23,23 +23,23 @@ class TimeoutExp {
 //		Thread.sleep(2);
 //	}
 //
-//	@Test
-//	@Timeout(value = 1, unit = TimeUnit.MINUTES, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
-//	void test_3() throws InterruptedException {
-//		Thread.sleep(60004);
-//	}
-//	
-//	@Test
-//	@Timeout(value = 6, unit = TimeUnit.MILLISECONDS, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
-//	void test_2() throws InterruptedException {
-//		Thread.sleep(5000);
-//	}
+	@Test
+	@Timeout(value = 100, unit = TimeUnit.SECONDS, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
+	void test_3() throws InterruptedException {
+		Thread.sleep(6000);
+	}
 	
 	@Test
-    @Timeout(2)
-    public void testApiCall() {
-        String apiUrl = "http://localhost:3000/api/seafoods";
-        String apiResponse = APICaller.callApi(apiUrl);
-        System.out.println(apiResponse);
-    }
+	@Timeout(value = 100, unit = TimeUnit.SECONDS, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
+	void test_2() throws InterruptedException {
+		Thread.sleep(10000);
+	}
+	
+//	@Test
+//    @Timeout(2)
+//    public void testApiCall() {
+//        String apiUrl = "http://localhost:3000/api/seafoods";
+//        String apiResponse = APICaller.callApi(apiUrl);
+//        System.out.println(apiResponse);
+//    }
 }
