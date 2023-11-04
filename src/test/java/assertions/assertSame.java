@@ -23,11 +23,11 @@ class assertSame {
 		assertTrue(MathUtils.isEvenNumber(4));
 	}
 	
-	@Test
-	void test_2() {
-		int a = 3;
-		int b = a;
-		assertSame(a, b, "Should be same!");
-	}
+//	@Test
+//	void test_2() {
+//		int a = 3;
+//		int b = a;
+//		assertSame(a, b, "Should be same!");
+//	}
 
 }

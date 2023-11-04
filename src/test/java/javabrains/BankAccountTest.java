@@ -82,7 +82,7 @@ class BankAccountTest {
 
     @BeforeEach
     public void setUp() {
-        otherAccount = new BankAccount("Cam Nhung", 1000);
+        otherAccount = new BankAccount("Minh Thuan", 1000);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package annotations;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Disabled;
@@ -15,39 +15,21 @@ import javabrains.StringUtils;
 
 @Tag("fast")
 @Tag("model")
-@Disabled("Disabled")
+//@Disabled("Disabled")
 class DisableExp {
 
 	@Test
-	@Tag("taxes")
+	@Tag("caculate")
 	void testingTaxCalculation() {
+		int actual = MathUtils.add(4, 5);
+		assertEquals(9, actual);
 	}
 
 	@Test
-	@Tag("taxes")
+	@Tag("caculate")
 	@Disabled("Disabled")
 	void testingTaxCalculation_2() {
+		int actual = MathUtils.subtract(5, 4);
+		assertEquals(1, actual);
 	}
-	
-//	@Nested
-//	@Order(2)
-//	@ExtendWith(DisableNestedExt)
-//	class PrimaryTests{
-//		@Test
-//		void test_1() {
-//			MathUtils mathUtils = new MathUtils();
-//			assertEquals(10, mathUtils.add(6, 4));
-//		}
-//	}
-//	
-//	@Nested
-//	@Order(1)
-//	class SecondaryTests{
-//		@Test
-//		void test_2() {
-//			StringUtils stringUtils = new StringUtils();
-//			assertTrue(StringUtils.isPalindrome("abcba"));
-//		}
-//	}
-
 }
